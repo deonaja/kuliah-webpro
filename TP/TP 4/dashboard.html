@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard Deon</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        outline: none;
+        border: none;
+        text-decoration: none;
+      }
+      body {
+        font-family: "Comic Sans MS", cursive, sans-serif;
+        background-color: #fbf5eb;
+        color: #000;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      /* Navbar */
+      .navbar {
+        color: #fff;
+        display: flex;
+        justify-content: space-between;
+        padding: 1.4rem 7%;
+        align-items: center;
+        background-color: #000;
+        border-bottom: #000 2px solid;
+        top: 0;
+        left: 0;
+        right: 0;
+        position: fixed;
+        z-index: 9999;
+      }
+      .navbar .navbar-logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #fff;
+      }
+      .navbar .navbar-nav a {
+        color: #fff;
+        display: inline-block;
+        font-size: 1.1rem;
+        margin: 0 1rem;
+      }
+      .navbar .navbar-nav a:hover {
+        color: #aaaaaa;
+      }
+
+      /* Content */
+      .content {
+        color: #000;
+        padding: 2rem 7%;
+        margin-top: 60px;
+      }
+
+      .content img {
+        width: 1300px;
+        height: 500px;
+        border-radius: 10px;
+        border: 2px dashed #000;
+      }
+      .content a {
+        color: #e2e2e2;
+        font-weight: bold;
+      }
+      .content a:hover {
+        color: #656565;
+      }
+      .content h1 {
+        margin-bottom: 2rem;
+      }
+
+      .text-overlay {
+        position: absolute;
+        top: 30%;
+        left: 10%;
+        color: #fff;
+      }
+      .text-overlay p {
+        right: 100px;
+        margin-top: 10px;
+        font-size: 1.2rem;
+        color: #fff;
+      }
+
+      /* Collection */
+      .collection {
+        padding: 2rem 7%;
+      }
+      .collection h1 {
+        margin-bottom: 2rem;
+      }
+      .collection .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+      }
+      .collection .card {
+        border-radius: 12px;
+        padding: 10px;
+      }
+      .collection .card img {
+        width: 100%;
+        border-radius: 10px;
+        aspect-ratio: 4/3;
+        object-fit: cover;
+        display: block;
+      }
+      .collection .card figcaption {
+        text-align: center;
+        margin-top: 8px;
+        font-weight: bold;
+      }
+
+      @media (max-width: 768px) {
+        .grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar Start -->
+    <nav class="navbar" id="navbar">
+      <a href="#" class="navbar-logo">deonaja Page</a>
+      <div class="navbar-nav">
+        <a href="#home">Home</a>
+        <a href="#collection">Collection</a>
+        <a href="index.html">Logout</a>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+    <!-- Content Start -->
+    <section class="content" id="home">
+      <h1>Home</h1>
+      <img src="home.jpg" alt="home-page" />
+      <main class="text-overlay">
+        <h2>
+          This is
+          <span
+            ><a href="https://github.com/deonaja"><i>deonaja</i></a></span
+          >
+          page
+        </h2>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente
+          cupiditate quia fugit. Eligendi, voluptatem? Quod.
+        </p>
+      </main>
+    </section>
+    <!-- Content End -->
+    <!-- Collection Start -->
+    <section class="collection" id="collection">
+      <h1>Collection</h1>
+      <div class="grid">
+        <figure class="card">
+          <img src="img1.jpg" alt="Image 1" />
+          <figcaption>Gambar 1</figcaption>
+        </figure>
+        <figure class="card">
+          <img src="img2.jpg" alt="Image 2" />
+          <figcaption>Gambar 2</figcaption>
+        </figure>
+        <figure class="card">
+          <img src="img3.jpg" alt="Image 3" />
+          <figcaption>Gambar 3</figcaption>
+        </figure>
+        <figure class="card">
+          <img src="img4.jpg" alt="Image 4" />
+          <figcaption>Gambar 4</figcaption>
+        </figure>
+      </div>
+    </section>
+  </body>
+</html>

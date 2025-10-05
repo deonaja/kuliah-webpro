@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profil Diri</title>
+  </head>
+  <body>
+    <!-- Ini adalah Header atau judul -->
+    <h1>Profil Pribadi</h1>
+
+    <!-- Tabel untuk Layout video dan gambar -->
+    <table cellspacing="0" cellpadding="10">
+      <!-- Row atau kolom untuk judul -->
+      <tr>
+        <td align="center"><b>Foto Profil</b></td>
+        <td align="center"><b>Video Profil</b></td>
+        <td></td>
+      </tr>
+
+      <!-- Row atau kolom untuk gambar dan video -->
+      <tr>
+        <td align="center"><img src="ISVR4915.jpg" alt="Foto Profil" width="50%"/></td>
+        <td align="center">
+          <video width="480" height="270" controls>
+            <source src="video pti.mp4" type="video/mp4" />
+            Browser Anda tidak mendukung pemutar video.
+          </video>
+        </td>
+      </tr>
+    </table>
+
+    <!-- ini menggunakan h2 untuk header selanjutnya -->
+    <h2>Tentang Saya</h2>
+    <p>Hai... perkenalkan saya adalah seorang yang antusias dalam mendalami pemrograman web khususnya front end dan web 3</p>
+
+    <!-- Sama juga menggunakan h2 dan tabel untuk deskripsi keterampilan -->
+    <h2>Keterampilan</h2>
+    <table>
+        <tr>
+            <th>Keterampilan</th>
+            <th>Tingkat</th>
+        </tr>
+        <tr>
+            <td>HTML/CSS</td>
+            <td>Menengah</td>
+        </tr>
+        <tr>
+            <td>C++</td>
+            <td>Menengah</td>
+        </tr>
+        <tr>
+            <td>JavaScript</td>
+            <td>Pemula</td>
+        </tr>
+    </table>
+
+    <h2>Hubungi Saya</h2>
+
+    <!-- Form untuk hubungi saya -->
+    <form action="#" method="post">
+        <label for="nama">Nama :</label>
+        <input type="text" id="nama" name="nama"><br><br>
+
+        <label for="email">Email :</label>
+        <input type="text" id="email" name="email"><br><br>
+
+        <label for="pesan">Pesan :</label>
+        <textarea name="pesan" id="pesan"></textarea>
+        <button type="submit">Kirim Pesan</button>
+    </form>
+
+    <!-- Link media sosial -->
+
+    <h2>Media Sosial :</h2>
+    <p><a href="#">LinkedIn</a>|<a href="#">Github</a>|<a href="#">Twitter</a></p>
+
+  </body>
+</html>
