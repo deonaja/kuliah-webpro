@@ -1,73 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tugas V1</title>
+    <link rel="stylesheet" href="global.css" />
     <style>
-        html, body {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-        }
-        .header, .footer {
-            background-color: #0461af;
-            text-align: center;
-            height: 15%;
-        }
-        .footer {
-            height: 10%;
-        }
-        .body {
-            display: flex;
-            height: 75%;
-        }
-        .menu {
-            width: 20%;
-            background-color: darkgray;
-        }
-        .middle {
-            width: 60%;
-            background-color: ghostwhite;
-        }
-        .right {
-            width: 20%;
-            background-color: darkgray;
-        }
-        
-        iframe {
-            border: none;
-            height: 100%;
-            width: 100%;
-        }
-    </style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        font-family: arial narrow;
+        font-size: 10pt;
+        word-spacing: 1pt;
+      }
+      .header,
+      .footer {
+        background-color: #0461af;
+        text-align: center;
+        height: 15%;
+      }
+      .footer {
+        height: 10%;
+      }
+      .body {
+        display: flex;
+        height: 75%;
+      }
+      .menu {
+        width: 20%;
+        background-color: darkgray;
+      }
+      .middle {
+        width: 60%;
+        background-color: ghostwhite;
+      }
+      .right {
+        width: 20%;
+        background-color: darkgray;
+      }
 
-</head>
-<body>
+      iframe {
+        border: none;
+        height: 100%;
+        width: 100%;
+      }
+    </style>
+    
+  </head>
+  <body>
     <!-- Header Start -->
     <div class="header">
-        <iframe src="header.html" frameborder="0"></iframe>
+      <iframe src="header.html" frameborder="0"></iframe>
     </div>
     <!-- Header End -->
 
     <!-- Body start -->
     <div class="body">
-        <div class="menu">
-            <iframe src="menu.html" frameborder="0"></iframe>
-        </div>
-        <div class="middle">
-            <iframe src="main.html" frameborder="0"></iframe>
-        </div>
-        <div class="right">
-            <iframe src="right.html" frameborder="0"></iframe>
-        </div>
+      <div class="menu">
+        <iframe src="menu.html" frameborder="0"></iframe>
+      </div>
+      <div class="middle">
+        <iframe src="main.html" frameborder="0"></iframe>
+      </div>
+      <div class="right">
+        <iframe src="right.html" frameborder="0"></iframe>
+      </div>
     </div>
     <!-- Body end -->
 
     <!-- Footer start -->
     <div class="footer">
-        <iframe src="footer.html" frameborder="0"></iframe>
+      <iframe src="footer.html" frameborder="0"></iframe>
     </div>
     <!-- Footer end -->
-</body>
+  </body>
 </html>
