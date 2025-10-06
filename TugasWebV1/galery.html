@@ -1,0 +1,56 @@
+<head>
+  <link rel="stylesheet" href="global.css" />
+  <style>
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* 2 kolom per baris */
+      gap: 20px; /* jarak antar gambar */
+      justify-items: center;
+    }
+
+    figure {
+      text-align: center;
+    }
+
+    img {
+      width: 90%;
+      border-radius: 10px;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    figcaption {
+      margin-top: 8px;
+      font-size: 14px;
+      color: #333;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Galeri</h1>
+  <p>ini adalah foto-foto bagian dari kehidupan saya</p>
+
+  <div class="gallery">
+    <figure>
+      <img src="img1.jpg" alt="Image 1" />
+      <figcaption>Gambar 1</figcaption>
+    </figure>
+
+    <figure>
+      <img src="img2.jpg" alt="Image 2" />
+      <figcaption>Gambar 2</figcaption>
+    </figure>
+
+    <figure>
+      <img src="img3.jpg" alt="Image 3" />
+      <figcaption>Gambar 3</figcaption>
+    </figure>
+
+    <figure>
+      <img src="img4.jpg" alt="Image 4" />
+      <figcaption>Gambar 4</figcaption>
+    </figure>
+  </div>
+</body>
