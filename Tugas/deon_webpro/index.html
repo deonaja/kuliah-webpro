@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pemesanan Barang</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0f7fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #00bcd4;
+            border: 2px solid #000;
+            width: 400px;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        h2 {
+            text-align: center;
+            color: white;
+            background-color: #0000cc;
+            padding: 10px;
+            margin: -20px -20px 20px -20px;
+            border-radius: 10px 10px 0 0;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            color: #000;
+        }
+
+        input[type="text"],
+        input[type="number"] {
+            width: 95%;
+            padding: 8px;
+            border: none;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn-small {
+            padding: 5px 10px;
+            font-size: 12px;
+            background-color: #ff9800;
+            color: #fff;
+        }
+
+        .btn {
+            background-color: #4CAF50;
+            color: white;
+            width: 100%;
+        }
+
+        /* --- Tambahan agar saat print warna tetap muncul --- */
+        @media print {
+            body {
+                background: white;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+
+            .container {
+                border: 2px solid #000;
+                background-color: #00bcd4 !important;
+                color: black !important;
+                box-shadow: none;
+            }
+
+            h2 {
+                background-color: #0000cc !important;
+                color: white !important;
+            }
+
+            button {
+                display: none;
+                /* Sembunyikan tombol saat print */
+            }
+
+            input {
+                background: white !important;
+                border: 1px solid #555 !important;
+                color: black !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Form Pemesanan Barang</h2>
+
+        <label>Kode Barang</label>
+        <input type="text" id="kode">
+        <button class="btn-small" onclick="cariBarang()">Cari</button>
+
+        <label>Nama Barang</label>
+        <input type="text" id="nama" readonly>
+
+        <label>Harga Barang</label>
+        <input type="text" id="harga" readonly>
+
+        <label>Jumlah Barang</label>
+        <input type="number" id="jumlah">
+        <button class="btn-small" onclick="hitungTotal()">Hitung</button>
+
+        <label>Total Harga</label>
+        <input type="text" id="total" readonly>
+
+        <label>Diskon</label>
+        <input type="text" id="diskon" readonly>
+
+        <label>Total Bayar</label>
+        <input type="text" id="bayar" readonly>
+
+        <button class="btn" onclick="cetak()">Cetak</button>
+    </div>
+
+    <script>
+        // Data barang
+        const barangList = {
+            "A001": { nama: "Televisi Samsung 50”", harga: 5000000 },
+            "A002": { nama: "VCD Player Sony", harga: 750000 },
+            "A003": { nama: "Mini Compo", harga: 2300000 }
+        };
+
+        // Fungsi cari barang
+        function cariBarang() {
+            const kode = document.getElementById("kode").value.toUpperCase();
+            const barang = barangList[kode];
+            if (barang) {
+                document.getElementById("nama").value = barang.nama;
+                document.getElementById("harga").value = barang.harga.toLocaleString("id-ID");
+            } else {
+                alert("Kode barang tidak ditemukan!");
+                document.getElementById("nama").value = "";
+                document.getElementById("harga").value = "";
+                document.getElementById("harga").value = "";
+                document.getElementById("diskon").value = "";
+                document.getElementById("bayar").value = "";
+            }
+        }
+
+        // Fungsi hitung total
+        function hitungTotal() {
+            const harga = parseFloat(document.getElementById("harga").value.replace(/\D/g, '')) || 0;
+            const jumlah = parseInt(document.getElementById("jumlah").value) || 0;
+            const total = harga * jumlah;
+            let diskon = 0;
+
+            if (jumlah > 10) {
+                diskon = 0.12 * harga;
+            }
+
+            const totalBayar = total - diskon;
+
+            document.getElementById("total").value = total.toLocaleString("id-ID");
+            document.getElementById("diskon").value = diskon.toLocaleString("id-ID");
+            document.getElementById("bayar").value = totalBayar.toLocaleString("id-ID");
+        }
+
+        // Fungsi cetak
+        function cetak() {
+            const nama = document.getElementById("nama").value;
+            const totalBayar = document.getElementById("bayar").value;
+            if (nama && totalBayar) {
+                window.print();
+            } else {
+                alert("Lengkapi data terlebih dahulu sebelum mencetak!");
+            }
+        }
+    </script>
+</body>
+
+</html>
