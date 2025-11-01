@@ -1,0 +1,124 @@
+/* Root */
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.layout-container {
+  display: flex;
+  min-height: 100vh;
+  background-color: #e3e3e3;
+}
+
+/* Sidebar */
+
+.sidebar {
+  width: 20%;
+  padding: 20px;
+  margin: 20px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+}
+
+.sidebar .profile {
+  text-align: center;
+  align-items: center;
+  padding: 15px;
+}
+
+.sidebar .profile img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.sidebar .menu h5 {
+  color: red;
+}
+
+.sidebar .menu-section {
+  border-bottom: 1px solid #ccc;
+}
+
+.sidebar .menu-section p {
+  padding: 10px;
+}
+
+.sidebar .menu-section p:hover {
+  background-color: rgb(255, 83, 83);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* Main */
+
+.main {
+  flex: 1;
+  margin: 5px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Section */
+
+.section {
+  background-color: white;
+  border: 1px solid #ccc;
+  margin: 0px 10px;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  align-items: center;
+}
+
+
+
+/* filter bar */
+
+.filter-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.filter-bar select {
+  padding: 4px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.btn-filter {
+  padding: 4px;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  background-color: #218838;
+}
+
+/* Data count */
+
+.data-count {
+  display: flex;
+  gap: 10px;
+}
+
+.data-count select {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding-right: 5px;
+    margin-bottom: 10px;
+}
+
+/* tabel footer */
+
+.footer-table {
+  display: flex;
+  justify-content: space-between;
+}
