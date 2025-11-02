@@ -1,0 +1,71 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Container */
+
+.container {
+  background-color: #00bcd4;
+  border: 2px solid #000;
+  width: 400px;
+  padding: 20px 30px;
+  border-radius: 10px;
+}
+
+.container h2 {
+  background-color: rgb(255, 255, 0);
+  padding: 20px;
+  margin: -20px -30px 20px -30px;
+  border-radius: 10px 10px 0 0;
+  text-align: center;
+}
+
+label {
+  display: block;
+  padding-top: 10px;
+}
+
+input,
+button,
+select {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.btn-small {
+  border: none;
+  padding: 5px 10px;
+  font-size: 12px;
+  background-color: #ff9800;
+  color: #fff;
+}
+
+.btn {
+  width: 100%;
+  border: none;
+  background-color: #4caf50;
+  padding: 10px;
+  margin: 10px 0;
+  color: #fff;
+}
+
+/* Button interaktif */
+
+.btn-small:hover {
+    background-color: #b76e00;
+    color: #000;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #317133;
+    color: #000;
+    cursor: pointer;
+}

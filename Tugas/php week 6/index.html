@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Penjualan Barang</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-penjualan">
+        <form method="post" action="proses.php">
+          <h2>Form Penjualan Barang</h2>
+
+          <label>Kode Barang</label>
+          <input type="text" name="kode" required />
+          <button class="btn-small" type="submit" name="cari">Cari</button
+          ><br />
+
+          <label>Nama Barang</label>
+          <input type="text" name="nama" readonly /><br />
+
+          <label>Harga Barang</label>
+          <input type="text" name="harga" readonly /><br />
+
+          <label>Jumlah Barang</label>
+          <input type="number" name="jumlah" /><br />
+
+          <label>Metode Bayar</label>
+          <select name="metode">
+            <option value="">Pilih</option>
+            <option value="Cash">Cash</option>
+            <option value="Kredit">Kredit</option>
+          </select>
+          <button class="btn-small" type="submit" name="proses">Proses</button
+          ><br />
+
+          <label>Total Harga</label>
+          <input type="text" name="total" readonly /><br />
+
+          <label>Diskon</label>
+          <input type="text" name="diskon" readonly /><br />
+
+          <label>Total Bayar</label>
+          <input type="text" name="totalbayar" readonly /><br />
+
+          <button class="btn" type="submit" name="cetak">Cetak</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
