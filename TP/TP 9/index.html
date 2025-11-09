@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>103032300101</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <form action="showData.php" method="post">
+        <h1>Formulir Data Diri</h1>
+        <label><b>Nama Lengkap :</b></label>
+        <input class="text" name="nama" type="text" />
+
+        <label><b>Tanggal Lahir :</b></label>
+        <input class="text" name="tgl_lahir" type="date" />
+
+        <label><b>Hobi :</b></label>
+        <label
+          ><input type="checkbox" name="hobi[]" value="membaca" />Membaca</label
+        >
+        <label
+          ><input
+            type="checkbox"
+            name="hobi[]"
+            value="olahraga"
+          />Olahraga</label
+        >
+        <label
+          ><input type="checkbox" name="hobi[]" value="musik" />Musik</label
+        >
+        <label
+          ><input type="checkbox" name="hobi[]" value="lainnya" />Lainnya</label
+        >
+
+        <button name="kirim">Kirim</button>
+      </form>
+    </div>
+  </body>
+</html>
