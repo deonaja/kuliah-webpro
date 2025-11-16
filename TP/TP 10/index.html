@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AJAX Greeting</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Form Sapa Menggunakan AJAX dan PHP</h1>
+      <label for="nama">Masukan Nama Anda: </label>
+      <input type="text" id="nama" placeholder="Contoh : Deon" />
+      <button id="kirimBtn">Kirim</button>
+      <div id="response"></div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const responseBox = document.getElementById("response");
+        responseBox.textContent = "Menunggu input...";
+        responseBox.classList.remove("success", "error");
+      });
+
+      document
+        .getElementById("kirimBtn")
+        .addEventListener("click", async () => {
+          const nama = document.getElementById("nama").value.trim();
+          const responseBox = document.getElementById("response");
+
+          if (!nama) {
+            responseBox.textContent = "Nama tidak boleh kosong.";
+            responseBox.classList.remove("success");
+            responseBox.classList.add("error");
+            return;
+          }
+
+          try {
+            const response = await fetch("server.php", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/x-www-form-urlencoded",
+              },
+              body: new URLSearchParams({ nama }),
+            });
+
+            if (!response.ok) {
+              throw new Error("Respon server gagal.");
+            }
+
+            const text = await response.text();
+            responseBox.textContent = text;
+            responseBox.classList.remove("error");
+            responseBox.classList.add("success");
+          } catch (error) {
+            responseBox.textContent = "Terjadi kesalahan: " + error.message;
+            responseBox.classList.remove("success");
+            responseBox.classList.add("error");
+          }
+        });
+    </script>
+  </body>
+</html>
