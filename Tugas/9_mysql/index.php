@@ -28,8 +28,8 @@ $result = mysqli_query($conn, "SELECT * FROM matakuliah");
       <td><?= $row['SKS'] ?></td>
       <td><?= $row['Semester'] ?></td>
       <td>
-        <a href="form_edit.php?Kode_MK=<?= $row['Kode_MK'] ?>">Edit</a> |
-        <a href="hapus.php?Kode_MK=<?= $row['Kode_MK'] ?>" onclick="return confirm('Yakin hapus?')">Hapus</a>
+        <a href="form_edit.php?id=<?= $row['Kode_MK'] ?>">Edit</a> |
+        <a href="hapus.php?id=<?= $row['Kode_MK'] ?>" onclick="return confirm('Yakin hapus?')">Hapus</a>
       </td>
     </tr>
     <?php endwhile; ?>
